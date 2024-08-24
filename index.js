@@ -2,6 +2,7 @@ import express from 'express'
 import { config} from 'dotenv'
 import pg from 'pg'
 
+const {CrearUsuario} = require('../controllers/index.controller')
 config()
 
 const app = express()
@@ -20,5 +21,8 @@ app.get('/ping', async (req, res) => {
     return res.json(result.rows[0])
 })
 
+app.post('/users', CrearUsuario)
+
+app.get()
 app.listen(4000)
 console.log('Servidor en el puerto 4000')
