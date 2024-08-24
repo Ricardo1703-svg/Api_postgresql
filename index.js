@@ -2,7 +2,6 @@ import express from 'express'
 import { config} from 'dotenv'
 import pg from 'pg'
 
-const {CrearUsuario} = require('../controllers/index.controller')
 config()
 
 const app = express()
@@ -20,8 +19,6 @@ app.get('/ping', async (req, res) => {
     const result =await pool.query('SELECT NOW()')
     return res.json(result.rows[0])
 })
-
-app.post('/users', CrearUsuario)
 
 app.get()
 app.listen(4000)
