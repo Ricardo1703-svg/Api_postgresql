@@ -20,6 +20,5 @@ app.get('/ping', async (req, res) => {
     return res.json(result.rows[0])
 })
 
-app.get()
 app.listen(4000)
 console.log('Servidor en el puerto 4000')
