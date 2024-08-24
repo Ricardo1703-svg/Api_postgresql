@@ -13,7 +13,7 @@ const pool = new pg.Pool({
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.send('Hola perras!')
+    res.send('API EN LINEA!')
 })
 
 app.get('/ping', async (req, res) => {
